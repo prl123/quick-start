@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular $http使用</title>
+</head>
+<body ng-controller="ListCtrl">
+Angular $http 使用
+<script>
+    var baseUrl = 'quick/';
+</script>
+<script src="/static/js/angular.js"></script>
+<script>
+    var scutechApp = angular.module('myApp', []);
+    var baseUrl = '';
+    scutechApp.controller('ListCtrl', ['$scope', '$http',
+        function ($scope, $http) {
+            $http.get(baseUrl+'/json').success(function(data) {
+                debugger;
+                var data = data;
+                $scope.products = data;
+            });
+
+        }
+    ]);
+</script>
+</body>
+</html>
