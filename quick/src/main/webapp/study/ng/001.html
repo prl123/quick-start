@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>001</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body ng-controller="PhoneListCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                Search: <input ng-model="query">
+                Sort by:
+                <select ng-model="orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="age">Newest</option>
+                </select>
+            </div>
+            <div class="col-md-10">
+                <ul class="phones">
+                    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+                        <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"></a>
+                        <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                        <p>{{phone.snippet}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/angular/angular.js"></script>
+    <script>
+        angular.module('myApp',[])
+                .controller('PhoneListCtrl',phoneListCtrl);
+        function phoneListCtrl($scope, $http){
+            $http.get('phones/phones.json').success(function(data) {
+                $scope.phones = data;
+            });
+
+            $scope.orderProp = 'age';
+        }
+
+    </script>
+</body>
+</html>
