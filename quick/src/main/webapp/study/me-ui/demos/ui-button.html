@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button</title>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <style>
+        body {
+            background-color: white;
+
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            margin: 0;
+        }
+
+        html .btn-primary {
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #0088cc;
+            border-color: #0088cc #0088cc #006699;
+        }
+        html .btn-primary:hover {
+            border-color: #0099e6 #0099e6 #0077b3;
+            background-color: #0099e6;
+        }
+        html .btn-primary:active,
+        html .btn-primary:focus {
+            border-color: #0077b3 #0077b3 #0077b3;
+            background-color: #0077b3;
+        }
+        html .btn-primary.dropdown-toggle {
+            border-left-color: #0077b3;
+        }
+        html .btn-primary[disabled] {
+            border-color: #33bbff;
+            background-color: #33bbff;
+        }
+        html .btn-primary:hover,
+        html .btn-primary:focus {
+            color: #ffffff;
+        }
+        html .btn-primary-scale-2 {
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #006699;
+            border-color: #006699 #006699 #004466;
+        }
+        html .btn-primary-scale-2:hover {
+            border-color: #0077b3 #0077b3 #005580;
+            background-color: #0077b3;
+        }
+        html .btn-primary-scale-2:active,
+        html .btn-primary-scale-2:focus {
+            border-color: #005580 #005580 #005580;
+            background-color: #005580;
+        }
+        html .btn-primary-scale-2.dropdown-toggle {
+            border-left-color: #005580;
+        }
+        html .btn-primary-scale-2[disabled] {
+            border-color: #00aaff;
+            background-color: #00aaff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+
+                <h2>Buttons</h2>
+                <button class="btn btn-default" type="button">Default</button>
+                <button class="btn btn-primary" type="button">Primary</button>
+                <button class="btn btn-success" type="button">Success</button>
+                <button class="btn btn-info" type="button">Info</button>
+                <button class="btn btn-warning" type="button">Warning</button>
+                <button class="btn btn-danger" type="button">Danger</button>
+                <h2 class="spaced">Buttons Disabled</h2>
+                <button class="btn btn-primary" disabled="disabled" type="button">Primary button</button><button class="btn btn-default" disabled="disabled" type="button">Button</button>
+                <h2 class="spaced">Labels</h2>
+                <span class="label label-default">Default</span> <span class="label label-primary">Primary</span> <span class="label label-success">Success</span> <span class="label label-info">Info</span> <span class="label label-warning">Warning</span> <span class="label label-danger">Danger</span> <span class="label label-dark">Dark</span>
+
+            </div>
+            <div class="col-md-6">
+                <h2 class="short">Forms</h2>
+                <p>Individual form controls automatically receive some global styling.</p>
+                <form action="" type="post">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-6"><label>Your name *</label> <input class="form-control" id="name" maxlength="100" name="name" type="text" value=""></div>
+                            <div class="col-md-6"><label>Your email address *</label> <input class="form-control" id="email" maxlength="100" name="email" type="email" value=""></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12"><label>Comment *</label><textarea class="form-control" id="comment" maxlength="5000" name="comment" rows="10" style="height: 138px;"></textarea></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><input class="btn btn-primary" data-loading-text="Loading..." type="submit" value="Submit"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

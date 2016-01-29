@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button</title>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <style>
+        body {
+            background-color: white;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            margin: 0;
+        }
+
+        .ui.checkbox {
+            position: relative;
+            display: inline-block;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            outline: 0;
+            vertical-align: baseline;
+            font-style: normal;
+            min-height: 17px;
+            font-size: 1rem;
+            line-height: 17px;
+            min-width: 17px
+        }
+
+        .ui.checkbox input[type=checkbox],.ui.checkbox input[type=radio] {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0!important;
+            outline: 0;
+            z-index: 3;
+            width: 17px;
+            height: 17px
+        }
+
+        .ui.checkbox label {
+            cursor: auto;
+            position: relative;
+            display: block;
+            padding-left: 1.85714em;
+            outline: 0;
+            font-size: 1em
+        }
+
+        .ui.checkbox label:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 19px;
+            height: 19px;
+            content: '';
+            background: #fff;
+            border-radius: .21428571rem;
+            -webkit-transition: border .1s ease,opacity .1s ease,-webkit-transform .1s ease,box-shadow .1s ease;
+            transition: border .1s ease,opacity .1s ease,transform .1s ease,box-shadow .1s ease;
+            border: 1px solid #d4d4d5
+        }
+
+        .ui.checkbox input[type=checkbox]:checked + label:after {
+            box-sizing: border-box;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            left: 6.67px;
+            top: 2.22px;
+            display: table;
+            width: 6.67px;
+            height: 13.33px;
+            border-width: 2px;
+            border-style: solid;
+            border-top: 0;
+            border-left: 0;
+            content: '';
+            background-image: url("../icon.png");
+        }
+        /* end .squaredFour */
+    </style>
+    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+
+                <div class="ui checkbox">
+                    <input type="checkbox" value="None" id="squaredFour" name="check">
+                    <label for="squaredFour">CheckBox</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
